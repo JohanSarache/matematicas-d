@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Entornos virtuales
+.venv/
+venv/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Sistema
+.DS_Store
+
+# Temporales
+*.tmp
+*.log
