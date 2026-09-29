@@ -114,7 +114,6 @@ E_rectangulos = h_r * np.sum(Q[:-1])
 
 E_trapecio = trapcomp(ri, Q)
 
-
 # ============================================================
 # Resultados
 # ============================================================
@@ -192,7 +191,6 @@ for L_r in valores_L:
 tabla_convergencia = pd.DataFrame(
     datos_convergencia
 )
-
 
 print(
     tabla_convergencia
