@@ -20,3 +20,6 @@ print(f"\nMasa con trapecio: {mt:.5f} g")
 ms = simpsoncomp(x, rho * Ac)  # g
 print(f"Masa con Simpson: {ms:.5f} g")
 
+print("La precisión es:", abs(mt - ms) )
+
+print("La precisión es relativa es:", abs(mt - ms) / ms * 100, "%")
