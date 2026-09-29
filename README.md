@@ -120,3 +120,21 @@ o, desde otra terminal:
 ```bash
 docker compose down
 ```
+
+## Para estudiantes
+
+El repositorio es público y puede consultarse sin una cuenta de GitHub.
+
+### Descargar el material
+
+El repositorio puede descargarse desde GitHub mediante:
+
+**Code → Download ZIP**
+
+### Clonar el repositorio
+
+Si se dispone de Git:
+
+```bash
+git clone https://github.com/JohanSarache/matematicas-d.git
+cd matematicas-d
