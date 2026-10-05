@@ -32,7 +32,7 @@ from metodos import *
 # x² + y² = r²
 # xy = r² cos(theta) sin(theta)
 #
-# dA = r dr dtheta
+# dA = r dr dtheta        
 # ------------------------------------------------------------
 
 
@@ -45,7 +45,6 @@ def f(r, theta):
             + 0.6 * r**2 * np.cos(theta) * np.sin(theta)
         )* r
     )
-
 
 # ============================================================
 # Primera aproximación

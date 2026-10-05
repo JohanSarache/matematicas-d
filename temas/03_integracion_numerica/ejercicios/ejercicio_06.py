@@ -13,6 +13,9 @@ rho = np.array([4, 3.95, 3.89, 3.80, 3.60, 3.41, 3.30])
 Ac = np.array([100, 103, 106, 110, 120, 133, 149.6])
 
 # (a) calculo de la masa de la barra
+print("\n" + "=" * 55)
+print("Inciso (a): masa de la barra utilizando dos fórmulas de cuadratura")
+print()
 L = 12 * 100  # cm
 mt = trapcomp(x, rho * Ac)  # g
 print(f"\nMasa con trapecio: {mt:.5f} g")
@@ -21,5 +24,10 @@ ms = simpsoncomp(x, rho * Ac)  # g
 print(f"Masa con Simpson: {ms:.5f} g")
 
 print("La precisión es:", abs(mt - ms) )
+
+# (b) Diferencia relativa entre ambas estimaciones
+print("\n" + "=" * 55)
+print("Inciso (b): Diferencia relativa entre ambas estimaciones")
+print()
 
 print("La precisión es relativa es:", abs(mt - ms) / ms * 100, "%")
