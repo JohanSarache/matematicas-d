@@ -1,6 +1,41 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+# Problema: Presión de vapor de un líquido
+#
+# La presión de vapor P (kPa) sigue el modelo:
+#
+#     P(T) = alpha * exp(beta / T)
+#
+# donde:
+#     alpha = 6e5 kPa
+#     beta  = -3.3e3 K
+#     T     = temperatura en Kelvin
+#
+# Datos experimentales:
+#
+# T (K):    280   300   320   340   360    380    400
+# P (kPa):  4.6   10    19.9  36.6  62.7   101.5  156.8
+#
+# 1) Construir una interpolación lineal a trozos y una interpolación
+#    cúbica a trozos sobre los datos.
+#    Calcular el máximo error relativo en el intervalo [280, 400]
+#    para cada interpolación respecto al modelo P(T).
+#
+# 2) Aproximar la integral:
+#
+#        I = integral de P(T) dT entre 280 K y 400 K
+#
+#    utilizando:
+#       - Regla compuesta del trapecio.
+#       - Regla compuesta de Simpson.
+#
+# 3) Calcular el error relativo de cada aproximación usando como
+#    referencia el valor exacto de la integral y reportarlo con
+#    al menos 3 dígitos significativos.
+#
+# Comentar los resultados obtenidos.
+
 # ── Funciones ────────────────────────────────────────────────────────────────────
 def intNCcompuesta(f, a, b, L, n):
     z = np.linspace(a, b, L + 1)
@@ -49,12 +84,11 @@ beta  = -3.3e3
 def modelo(T_val):
     return alpha * np.exp(beta / T_val)
 
-T = np.array([280, 300, 320, 340, 360, 380, 400], dtype=float)
-P = np.array([4.6, 10, 19.9, 36.6, 62.7, 101.5, 156.8], dtype=float)
+T = np.array([280, 300, 320, 340, 360, 380, 400])
+P = np.array([4.6, 10, 19.9, 36.6, 62.7, 101.5, 156.8])
 # P = modelo(T)
 
 # ── Inciso (a): interpolación a trozos  ──────────────────────────
-
 L = len(T)-1
 
 # -- Lineal a trozos: 6 trozos, índices consecutivos --
@@ -87,7 +121,6 @@ print("  que la interpolación lineal (~6.68%) usando exactamente los mismos nod
 print("  esto se condice con el hecho que las derivadas del modelo son pequeñas")
 print("  en el [4.6,157]")
 print("=" * 55)
-
 
 # Verificación visual
 T_plot = np.linspace(280, 400, 500)
