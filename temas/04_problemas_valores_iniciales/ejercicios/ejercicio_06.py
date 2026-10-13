@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 
 from metodos import *
 
-
 # ============================================================
 # FUNCIONES VISTAS EN CLASE
 # ============================================================
