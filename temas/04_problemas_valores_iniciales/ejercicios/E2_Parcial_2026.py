@@ -55,3 +55,6 @@ plt.plot(t2,I2,color="red",label="Caso b")
 plt.grid()
 plt.legend()
 plt.show()
+
+
+
